@@ -1,0 +1,118 @@
+body{
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-color: #0E0F10;
+    animation: fade 0.5s;
+    font-family: 'Cutive Mono', monospace;
+}
+
+#header{
+    place-content: center;
+    clear: both;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hleft{
+    float:left;
+    text-align:center;
+}
+
+#hleft a img{
+    text-align: center;
+}
+
+#hright{
+    padding-left: 40%;
+    margin-top: 15%;
+}
+
+#content{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+#footer{
+    clear: both;
+    background-color: orange;
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 30px;
+    background-color: black;
+    padding: 5px;
+    font-weight:normal;
+}
+
+.blue{
+    color: #2566CA;
+}
+
+.green{
+    color: #60AD99;
+}
+
+.blink{
+    color: black;
+    border-bottom: 1px solid #fff;
+    animation: cursor-blink 1.5s infinite alternate;
+}
+
+#hright h1{
+    animation: typing-text 4s steps(18), cursor-blink 0.5s infinite alternate;
+    overflow: hidden;
+    white-space: nowrap;
+    width: fit-content;
+    background-color: unset;
+    border-right: 3px solid #fff;
+}
+
+@keyframes typing-text{
+    from{
+        width: 0;
+    }to{
+        width: 18ch;
+    }
+}
+
+@keyframes cursor-blink{
+    from{
+        border-color:  transparent;
+    }to{
+        border-color: #fff;
+    }
+}
+
+@keyframes fade{
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@media (min-width: 800px) {
+    #content, #header {
+    	width: 800px;
+    }
+}
+@media (max-width: 800px) {
+    #hleft {
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+    #hright {
+        clear: both;
+        padding: 0;
+    }
+    #content {
+        margin: 5%
+    }
+}
